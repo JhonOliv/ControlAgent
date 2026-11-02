@@ -27,6 +27,8 @@ public class Projects {
 	private String description;
 	@Column(length = 255, nullable = false)
 	private String repositoryURL;
+	@Column(length = 25, nullable = false)
+	private String branchName;
 	@OneToMany(mappedBy = "project")
 	private List<Tasks> task;
 	@Column(nullable = false)
