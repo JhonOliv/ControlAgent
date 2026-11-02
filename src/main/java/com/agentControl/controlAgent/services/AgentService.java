@@ -8,5 +8,4 @@ public interface AgentService {
 	
 	public AgentControlResponseDTO agentCreate();
 	
-	
 }
