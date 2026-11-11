@@ -1,11 +1,15 @@
 package com.agentControl.controlAgent.services;
 
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.agentControl.controlAgent.DTOs.requests.jira.CreateDashboardDtoRequest;
 import com.agentControl.controlAgent.DTOs.responses.jira.DashboardDtoResponse;
 import com.agentControl.controlAgent.configuration.JiraConnectionConfiguration;
+
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
 @FeignClient(
 		name = "jiraApi",
@@ -15,13 +19,15 @@ import com.agentControl.controlAgent.configuration.JiraConnectionConfiguration;
 public interface ManagerDashboards {
 
 	@PostMapping(
-			value = "/rest/api/v3/dashboard",
-			consumes = "application/json"	
+			value = "/rest/agile/1.0/board",
+			consumes = "application/json"
 			)
-	public DashboardDtoResponse  createDashboard(CreateDashboardDtoRequest request);
+	public DashboardDtoResponse  createDashboard( @RequestBody CreateDashboardDtoRequest request);
 	
-	public DashboardDtoResponse	updateDashboardData();
-	public DashboardDtoResponse findDashboard(String id);
-	public DashboardDtoResponse deleteDashboard(String id);
+	@GetMapping(
+			value = "/rest/agile/1.0/board/{boardId}",
+			consumes = "application/json"
+			)
+	public DashboardDtoResponse findDashboard(@PathVariable("boardId") String boardId);
 	 
 }

@@ -33,6 +33,48 @@ public class AgentExecution {
 	private String agentDescription;
 	@OneToOne
 	private AgentFunction agentFunstion;
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public AgentType getAgentType() {
+		return agentType;
+	}
+	public void setAgentType(AgentType agentType) {
+		this.agentType = agentType;
+	}
+	public Projects getProject() {
+		return project;
+	}
+	public void setProject(Projects project) {
+		this.project = project;
+	}
+	public Tasks getTask() {
+		return task;
+	}
+	public void setTask(Tasks task) {
+		this.task = task;
+	}
+	public List<Execution> getExecution() {
+		return execution;
+	}
+	public void setExecution(Execution execution) {
+		this.execution.add(execution);
+	}
+	public String getAgentDescription() {
+		return agentDescription;
+	}
+	public void setAgentDescription(String agentDescription) {
+		this.agentDescription = agentDescription;
+	}
+	public AgentFunction getAgentFunstion() {
+		return agentFunstion;
+	}
+	public void setAgentFunstion(AgentFunction agentFunstion) {
+		this.agentFunstion = agentFunstion;
+	}
 	
 
 }

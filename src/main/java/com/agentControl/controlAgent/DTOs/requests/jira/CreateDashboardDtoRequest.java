@@ -1,11 +1,10 @@
 package com.agentControl.controlAgent.DTOs.requests.jira;
 
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
-public record CreateDashboardDtoRequest(String name, String[] editPermission, 
-		String descripstion, String[] sharePermission) {
-
-}
+@RequiredArgsConstructor
+public record CreateDashboardDtoRequest(String name, String boardType) {}

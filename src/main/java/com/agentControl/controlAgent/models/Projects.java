@@ -48,5 +48,53 @@ public class Projects {
 		this.updateAt = LocalDateTime.now();
 	}
 
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getRepositoryURL() {
+		return repositoryURL;
+	}
+
+	public void setRepositoryURL(String repositoryURL) {
+		this.repositoryURL = repositoryURL;
+	}
+
+	public String getBranchName() {
+		return branchName;
+	}
+
+	public void setBranchName(String branchName) {
+		this.branchName = branchName;
+	}
+
+	public List<Tasks> getTask() {
+		return task;
+	}
+
+	public void setTask(Tasks task) {
+		this.task.add(task);
+	}
+	
 		
 }

@@ -23,4 +23,30 @@ public class ExecutionProcess {
 	@Column(length = 255, nullable = false)
 	private String logExcution;
 	
+	public AgentExecution getAgent() {
+		return agent;
+	}
+	public void setAgent(AgentExecution agent) {
+		this.agent = agent;
+	}
+	public Projects getProject() {
+		return project;
+	}
+	public void setProject(Projects project) {
+		this.project = project;
+	}
+	public Tasks getTask() {
+		return task;
+	}
+	public void setTask(Tasks task) {
+		this.task = task;
+	}
+	public String getLogExcution() {
+		return logExcution;
+	}
+	public void setLogExcution(String logExcution) {
+		this.logExcution = logExcution;
+	}
+	
+	
 }

@@ -50,6 +50,56 @@ public class Tasks {
 	public void onUpdate() {
 		this.updateAt = LocalDateTime.now();
 	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getExternalIdTrello() {
+		return externalIdTrello;
+	}
+
+	public void setExternalIdTrello(String externalIdTrello) {
+		this.externalIdTrello = externalIdTrello;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public Projects getProject() {
+		return project;
+	}
+
+	public void setProject(Projects project) {
+		this.project = project;
+	}
+
+	public Status getStatusTask() {
+		return statusTask;
+	}
+
+	public void setStatusTask(Status statusTask) {
+		this.statusTask = statusTask;
+	}
+	
+	
 	
 
 }
